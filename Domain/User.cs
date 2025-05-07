@@ -1,11 +1,8 @@
 namespace Domain;
-using System.ComponentModel.DataAnnotations;
 
-public class User
+
+public class User : BaseEntity
 {
-    [Key]
-    public string Id { get; set; } = Guid.NewGuid().ToString();
-
     public required string Name { get; set; }
 
     public required string LastName { get; set; }
