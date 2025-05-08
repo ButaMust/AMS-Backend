@@ -29,3 +29,5 @@ C:\Users\asmet\Desktop\Udemy Course\AMS-Backend\Persistance\obj\Debug\net9.0\Per
 C:\Users\asmet\Desktop\Udemy Course\AMS-Backend\Persistance\obj\Debug\net9.0\refint\Persistance.dll
 C:\Users\asmet\Desktop\Udemy Course\AMS-Backend\Persistance\obj\Debug\net9.0\Persistance.pdb
 C:\Users\asmet\Desktop\Udemy Course\AMS-Backend\Persistance\obj\Debug\net9.0\ref\Persistance.dll
+C:\Users\asmet\Desktop\Udemy Course\AMS-Backend\Persistance\bin\Debug\net9.0\Persistance.runtimeconfig.json
+C:\Users\asmet\Desktop\Udemy Course\AMS-Backend\Persistance\obj\Debug\net9.0\Persistance.genruntimeconfig.cache
