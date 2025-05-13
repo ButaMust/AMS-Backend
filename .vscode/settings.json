@@ -11,7 +11,8 @@
             "driver": "MySQL",
             "database": "mydatabase",
             "username": "user",
-            "name": "Docker MySQL"
+            "name": "Docker MySQL",
+            "password": "userpassword"
         }
     ]
 }
