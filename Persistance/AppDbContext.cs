@@ -14,5 +14,7 @@ namespace App.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Building> Buildings { get; set; }
     }
 }

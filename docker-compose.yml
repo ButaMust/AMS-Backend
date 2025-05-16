@@ -16,21 +16,6 @@ services:
     networks:
       - mysql-network
 
-  api:
-    build:
-      context: .
-      dockerfile: API/Dockerfile
-    container_name: dotnet-api
-    ports:
-      - "5000:80"
-      - "5001:443"
-    depends_on:
-      - mysql
-    environment:
-      - ASPNETCORE_URLS=http://+:80
-    networks:
-      - mysql-network
-
 volumes:
   mysql_data:
 
