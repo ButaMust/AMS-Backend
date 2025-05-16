@@ -1,8 +1,5 @@
-using Domain;
 using Microsoft.EntityFrameworkCore;
-using App;
 using App.Data;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
