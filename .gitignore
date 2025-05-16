@@ -1,3 +1,6 @@
 **/bin/
 **/obj/
 .fake
+bin
+obj
+packagesgit rm -r --cached .
