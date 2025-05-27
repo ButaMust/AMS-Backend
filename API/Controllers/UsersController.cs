@@ -1,30 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using App.Data;
+using Application.Users.Commands;
+using Application.Users.Queries;
 using Domain;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    public class UsersController(ApplicationDbContext context) : BaseApiController
+    public class UsersController : BaseApiController
     {
         [HttpGet]
         public async Task<ActionResult<List<User>>> GetUsers()
         {
-            return await context.Users.ToListAsync();
+            return await Mediator.Send(new GetUserList.Query());
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUserDetail(string id)
         {
-            var user = await context.Users.FindAsync(id);
+            return await Mediator.Send(new GetUserDetails.Query { Id = id });
+        }
 
-            if(user == null) return NotFound();
-
-            return user;
+        [HttpPost]
+        public async Task<ActionResult<string>> CreateUser(User user)
+        {
+            return await Mediator.Send(new CreateUser.Command { User = user });
         }
     }
 }

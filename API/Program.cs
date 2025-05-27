@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using App.Data;
 using Persistance;
+using Application.Users.Queries;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
     )
 );
+builder.Services.AddMediatR(x => x.RegisterServicesFromAssemblyContaining<GetUserList.Handler>());
 
 var app = builder.Build();
 
