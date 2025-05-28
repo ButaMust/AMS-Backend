@@ -1,1 +1,3 @@
-SHOW TABLES;
+-- SHOW TABLES;
+
+SELECT * FROM Users;
