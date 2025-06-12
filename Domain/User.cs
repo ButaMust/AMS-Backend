@@ -13,5 +13,3 @@ public class User : BaseEntity
 
     public required string Role { get; set; }
 }
-
-

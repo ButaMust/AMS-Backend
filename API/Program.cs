@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using App.Data;
 using Persistance;
 using Application.Users.Queries;
+using Application.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     )
 );
 builder.Services.AddMediatR(x => x.RegisterServicesFromAssemblyContaining<GetUserList.Handler>());
+builder.Services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
 var app = builder.Build();
 

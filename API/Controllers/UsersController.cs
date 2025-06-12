@@ -25,5 +25,21 @@ namespace API.Controllers
         {
             return await Mediator.Send(new CreateUser.Command { User = user });
         }
+
+        [HttpPut]
+        public async Task<ActionResult> EditUSer(User user)
+        {
+            await Mediator.Send(new EditUser.Command { User = user });
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUser(string id)
+        {
+            await Mediator.Send(new DeleteUser.Command { Id = id });
+
+            return Ok();
+        }
     }
 }
